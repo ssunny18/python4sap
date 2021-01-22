@@ -1,9 +1,0 @@
-import win32com.client as client
-import os
-
-outlook = client.Dispatch("Outlook.Application").GetNameSpace("MAPI")
-inbox = outlook.GetDefaultFolder(6)
-messages = inbox.Items
-
-for message in messages:
-    print(message)
